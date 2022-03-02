@@ -1,8 +1,8 @@
 const db = require('../model/')
-const Sensor = db.sensor
+const Control = db.control
 
 exports.findAll = (req, res) => {
-    Sensor.find()
+    Control.find()
         .then((result) => {
             res.send(result)
         }).catch((err) => {
@@ -13,12 +13,12 @@ exports.findAll = (req, res) => {
 }
 
 exports.create = (req, res) => {
-    const sensorData = new Sensor({
+    const controlData = new Control({
         device: req.body.device,
         data: req.body.data
     })
 
-    sensorData.save(sensorData)
+    controlData.save(controlData)
         .then((result) => {
             res.send(result)
         }).catch((err) => {
@@ -32,7 +32,7 @@ exports.create = (req, res) => {
 exports.findOne = (req, res) => {
     const id = req.params.id
 
-    Sensor.findById(id)
+    Control.findById(id)
         .then((result) => {
             res.send(result)
         }).catch((err) => {
@@ -46,7 +46,7 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
     const id = req.params.id
 
-    Sensor.findByIdAndUpdate(id, req.body)
+    Control.findByIdAndUpdate(id, req.body)
         .then((result) => {
             if (!result) {
                 res.status(404).send({
@@ -66,7 +66,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
     const id = req.params.id
 
-    Sensor.findByIdAndRemove(id)
+    Control.findByIdAndRemove(id)
         .then((result) => {
             if (!result) {
                 res.status(404).send({
