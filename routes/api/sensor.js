@@ -6,7 +6,7 @@ module.exports = (app) => {
     router.post('/', sensors.create);
     router.get('/:id', sensors.findOne);
     router.put('/:id', sensors.update);
-    router.delete('/:id', sensors.delete)
+    router.delete('/:id', sensors.delete);
 
     app.use('/api/sensors', router);
 }

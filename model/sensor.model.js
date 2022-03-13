@@ -3,12 +3,10 @@ module.exports = (mongoose) => {
         "sensor",
         mongoose.Schema({
             device: {
-                type: String,
-                default: "Tidak Ada Device"
+                type: String
             },
             data: {
-                type: String,
-                default: "Belum Ada Data"
+                type: String
             },
         }, {
             timestamps: true
