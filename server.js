@@ -41,7 +41,6 @@ app.get('/', (req, res) => {
 
 require('./routes/api/sensor')(app);
 require('./routes/api/user')(app);
-require('./routes/api/control')(app);
 
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`)
