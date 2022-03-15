@@ -68,7 +68,7 @@ exports.findByKeyAndSort = (req, res) => {
             [key]: value
         })
         .sort({
-            createdAt: 1
+            createdAt: -1
         })
         .limit(1)
         .then((result) => {

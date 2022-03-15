@@ -1,4 +1,8 @@
 module.exports = (mongoose) => {
+    const moment = require("moment");
+
+    const indonesiaTime = moment().format();
+    console.log('indonesiaTime', indonesiaTime)
     const Sensor = mongoose.model(
         "sensor",
         mongoose.Schema({
@@ -7,7 +11,7 @@ module.exports = (mongoose) => {
             },
             data: {
                 type: String
-            },
+            }
         }, {
             timestamps: true
         })
