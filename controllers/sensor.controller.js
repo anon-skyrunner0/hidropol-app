@@ -59,6 +59,28 @@ exports.findByKey = (req, res) => {
         })
 }
 
+//find by key and sort by createdAt limit 1
+exports.findByKeyAndSort = (req, res) => {
+    const key = req.params.key
+    const value = req.params.value
+
+    Sensor.find({
+            [key]: value
+        })
+        .sort({
+            createdAt: 1
+        })
+        .limit(1)
+        .then((result) => {
+            res.send(result)
+        }).catch((err) => {
+            res.status(409).send({
+                message: err.message || "Error finding data !"
+            })
+        })
+}
+
+
 
 
 exports.update = (req, res) => {
