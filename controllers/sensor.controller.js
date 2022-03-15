@@ -43,6 +43,23 @@ exports.findOne = (req, res) => {
         })
 }
 
+exports.findByKey = (req, res) => {
+    const key = req.params.key
+    const value = req.params.value
+
+    Sensor.find({
+            [key]: value
+        })
+        .then((result) => {
+            res.send(result)
+        }).catch((err) => {
+            res.status(409).send({
+                message: err.message || "Error finding data !"
+            })
+        })
+}
+
+
 
 exports.update = (req, res) => {
     const id = req.params.id

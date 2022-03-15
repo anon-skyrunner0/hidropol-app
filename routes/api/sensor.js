@@ -7,6 +7,7 @@ module.exports = (app) => {
     router.get('/:id', sensors.findOne);
     router.put('/:id', sensors.update);
     router.delete('/:id', sensors.delete);
+    router.get('/:key/:value', sensors.findByKey);
 
     app.use('/api/sensors', router);
 }
