@@ -7,6 +7,7 @@ module.exports = (app) => {
     router.get('/:key/:value', controls.findByKey);
     router.put('/:key/:value', controls.updateByKey);
     router.delete('/:id', controls.delete);
+    router.put('/:id', controls.update);
 
     app.use('/api/controls', router);
 }

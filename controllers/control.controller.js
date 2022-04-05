@@ -57,6 +57,26 @@ exports.findByKey = (req, res) => {
         })
 }
 
+exports.update = (req, res) => {
+    const id = req.params.id
+
+    Sensor.findByIdAndUpdate(id, req.body)
+        .then((result) => {
+            if (!result) {
+                res.status(404).send({
+                    messages: "Not Found !"
+                })
+            }
+            res.send({
+                messages: "Updated Successfully !"
+            })
+        }).catch((err) => {
+            res.status(409).send({
+                messages: err.message || "Failed to update !"
+            })
+        })
+}
+
 exports.updateByKey = (req, res) => {
     const key = req.params.key
     const value = req.params.value
