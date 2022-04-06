@@ -60,7 +60,7 @@ exports.findByKey = (req, res) => {
 exports.update = (req, res) => {
     const id = req.params.id
 
-    Sensor.findByIdAndUpdate(id, req.body)
+    Control.findByIdAndUpdate(id, req.body)
         .then((result) => {
             if (!result) {
                 res.status(404).send({
