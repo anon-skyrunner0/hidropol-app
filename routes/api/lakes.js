@@ -74,7 +74,7 @@ module.exports = (app) => {
                 });
         }
 
-        apiCall();
+        setTimeout(apiCall(), 1000);
 
     })
 
