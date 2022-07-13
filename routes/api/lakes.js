@@ -6,6 +6,7 @@ module.exports = (app) => {
         const api = "https://testing-z.herokuapp.com"
 
         async function apiCall() {
+            //set controller
             axios.get(`${api}/api/sensors/device/ph_sensor`)
                 .then(function (res) {
                     const ph = res.data[0].data;
@@ -43,6 +44,31 @@ module.exports = (app) => {
                             });
                     }
 
+                }).catch(function (err) {
+                    console.log(err);
+                });
+
+            axios.get(`${api}/api/sensors/device/nutrition_sensor`)
+                .then(function (res) {
+                    const nutrition = res.data[0].data;
+                    if (nutrition >= 900) {
+                        axios.put(
+                                `https://testing-z.herokuapp.com/api/controls/625cfa9898b4120cea428ac4`, {
+                                    nutrition_down: {
+                                        status: false,
+                                    },
+                                    nutrition_down: {
+                                        status: false,
+                                    }
+                                }
+                            )
+                            .then((res) => {
+                                console.log(res);
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+                    }
                 }).catch(function (err) {
                     console.log(err);
                 });
