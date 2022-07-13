@@ -25,9 +25,53 @@ module.exports = (app) => {
                     nutriStatus,
                     waterHeightStatus
                 });
+
+
+
             } catch (error) {
                 console.log(error);
             }
+
+            axios.get(`${api}/api/sensors/device/ph_sensor`)
+                .then(function (res) {
+                    const ph = response.data[0].data;
+
+                    //handle ph down
+                    if (ph <= 6.2) {
+                        axios.put(
+                                `https://testing-z.herokuapp.com/api/controls/625cfa9898b4120cea428ac4`, {
+                                    ph_down: {
+                                        status: false,
+                                    },
+                                }
+                            )
+                            .then((res) => {
+                                console.log(res)
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+                    }
+
+                    if (ph >= 6.7) {
+                        axios.put(
+                                `https://testing-z.herokuapp.com/api/controls/625cfa9898b4120cea428ac4`, {
+                                    ph_up: {
+                                        status: false,
+                                    },
+                                }
+                            )
+                            .then((res) => {
+                                console.log(res);
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+                    }
+
+                }).catch(function (err) {
+                    console.log(err);
+                });
         }
 
         apiCall();
