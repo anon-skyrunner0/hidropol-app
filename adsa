@@ -1,0 +1,101 @@
+[33mcommit 5a21cec45507e2b17b0c0a0512d08456494ee89d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: adamfrsd-02 <adamfrdsid@gmail.com>
+Date:   Wed Jul 13 11:03:59 2022 +0700
+
+    update control
+
+[33mcommit 1231d49c4854602b1d1954d40fd35375d593efa9[m
+Author: adamfrsd-02 <adamfrdsid@gmail.com>
+Date:   Fri Apr 22 01:37:47 2022 +0700
+
+    create new api
+
+[33mcommit 04ffaa934488b2c741ca11f4e87212d6ae8f5bef[m
+Author: adamfrsd-02 <adamfrdsid@gmail.com>
+Date:   Tue Apr 19 05:25:04 2022 +0700
+
+    update control routing for update
+
+[33mcommit 24ab88ba32e951deacac5ef29997c4299df61f82[m
+Author: adamfrsd-02 <adamfrdsid@gmail.com>
+Date:   Wed Apr 6 14:42:22 2022 +0700
+
+    update
+
+[33mcommit 65f8ba7db054e430de833dbff3b6a0b3f2067120[m
+Author: adamfrsd-02 <adamfrdsid@gmail.com>
+Date:   Tue Apr 5 14:37:28 2022 +0700
+
+    update control api
+
+[33mcommit 8e8a98c5da154d8d3b7621928436aa0bb03df909[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Wed Mar 16 04:32:59 2022 +0700
+
+    controlling api
+
+[33mcommit 1a5943539cf6705f0bd0dc34b9c678d8a3c1f012[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Wed Mar 16 00:17:59 2022 +0700
+
+    add moment.js and update sorting sensor
+
+[33mcommit ddd4b11ce8636c489827b862d647807c91a4689e[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Tue Mar 15 18:48:43 2022 +0700
+
+    modify get data sensor
+
+[33mcommit b58932e2091ca19a76a83e69bb5a37864b4db87e[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Tue Mar 15 16:24:38 2022 +0700
+
+    add search by device
+
+[33mcommit 7012b1770527449861eaf7509e5852d91281dbaa[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Mon Mar 14 00:19:12 2022 +0700
+
+    delete control
+
+[33mcommit 27cb5e1ccc3747c4336eac0e35ac692fb787d031[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Mon Mar 14 00:17:53 2022 +0700
+
+    delete control
+
+[33mcommit 3c7bc50b41e95548b1bec632306d44b3d72f9e6e[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Mon Mar 14 00:15:37 2022 +0700
+
+    delete control
+
+[33mcommit f0d3d40e502b5df3a3a31e6150b63b87bb24aab5[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Sun Mar 13 23:11:34 2022 +0700
+
+    update sunday
+
+[33mcommit c40398593f2e61687cd016a0c1e53e5f81d2a013[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Wed Mar 2 15:21:23 2022 +0700
+
+    add controller for control system
+
+[33mcommit aaf885a19a525a24175b459303493ddf77497248[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Sat Feb 12 11:11:37 2022 +0700
+
+    sett server
+
+[33mcommit d3396c4900af5dddd45ed192f3a01bfb772d581b[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Sat Feb 12 11:06:30 2022 +0700
+
+    setting port
+
+[33mcommit 42ed4ef364424cd7f2c494c485db817e9214e2d4[m
+Author: Adam Firdaus <52478046+adamfrsd-02@users.noreply.github.com>
+Date:   Sat Feb 12 10:59:06 2022 +0700
+
+    initialize back-end

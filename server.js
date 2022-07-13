@@ -3,11 +3,8 @@ const cors = require('cors');
 const axios = require('axios');
 const http = require('http');
 const bodyParser = require("body-parser");
-const passport = require("passport");
 
 const app = express();
-
-const users = require("./routes/api/users");
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -16,7 +13,8 @@ app.use(function (req, res, next) {
 });
 
 // DB Config
-const db = require("./config/keys").mongoURI;
+// const db = require("./config/keys").mongoURI;
+const db = require('./model');
 
 app.use(express.json())
 app.use(cors());
@@ -24,7 +22,6 @@ app.use(express.urlencoded({
     extended: true
 }))
 
-const db = require('./model');
 const {
     response
 } = require('express');
@@ -51,13 +48,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/test', (req, res) => {
-    const api = "https://testing-z.herokuapp.com"
+    const api = "https://localhost:8000"
 
     async function apiCall() {
         try {
             const {
                 data: controls
-            } = await axios.get(`${api}/api/controls/625cfa9898b4120cea428ac4`);
+            } = await axios.get(`${api}/api/controls`);
             const {
                 data: phStatus
             } = await axios.get(`${api}/api/sensors/device/ph_sensor`);
@@ -81,12 +78,6 @@ app.get('/test', (req, res) => {
     apiCall();
 
 })
-
-// Passport middleware
-app.use(passport.initialize());
-
-// Passport config
-require("./config/passport")(passport);
 
 
 require('./routes/api/sensor')(app);
