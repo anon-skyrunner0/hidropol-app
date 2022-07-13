@@ -9,7 +9,7 @@ module.exports = (app) => {
             try {
                 const {
                     data: controls
-                } = await axios.get(`${api}/api/controls`);
+                } = await axios.get(`${api}/api/controls/625cfa9898b4120cea428ac4`);
                 const {
                     data: phStatus
                 } = await axios.get(`${api}/api/sensors/device/ph_sensor`);

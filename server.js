@@ -2,8 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 const http = require('http');
+const bodyParser = require("body-parser");
+const passport = require("passport");
 
 const app = express();
+
+const users = require("./routes/api/users");
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -11,6 +15,8 @@ app.use(function (req, res, next) {
     next();
 });
 
+// DB Config
+const db = require("./config/keys").mongoURI;
 
 app.use(express.json())
 app.use(cors());
@@ -51,7 +57,7 @@ app.get('/test', (req, res) => {
         try {
             const {
                 data: controls
-            } = await axios.get(`${api}/api/controls`);
+            } = await axios.get(`${api}/api/controls/625cfa9898b4120cea428ac4`);
             const {
                 data: phStatus
             } = await axios.get(`${api}/api/sensors/device/ph_sensor`);
@@ -76,11 +82,18 @@ app.get('/test', (req, res) => {
 
 })
 
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport config
+require("./config/passport")(passport);
+
 
 require('./routes/api/sensor')(app);
 require('./routes/api/user')(app);
 require('./routes/api/control')(app);
 require('./routes/api/lakes')(app);
+
 
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`)
