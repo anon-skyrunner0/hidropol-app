@@ -103,8 +103,10 @@ module.exports = (app) => {
 
         }
 
-        //run api call every 5 seconds
-        setInterval(apiCall, 5000);
+        //reload api every 5 seconds
+        setInterval(() => {
+            apiCall();
+        }, 5000);
 
     })
 
