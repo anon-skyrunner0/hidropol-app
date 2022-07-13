@@ -54,7 +54,7 @@ module.exports = (app) => {
                     if (nutrition >= 900) {
                         axios.put(
                                 `https://testing-z.herokuapp.com/api/controls/625cfa9898b4120cea428ac4`, {
-                                    nutrition_down: {
+                                    nutrition_up: {
                                         status: false,
                                     },
                                     nutrition_down: {
