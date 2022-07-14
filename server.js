@@ -49,6 +49,8 @@ app.get('/', (req, res) => {
 });
 
 
+
+
 require('./routes/api/sensor')(app);
 require('./routes/api/user')(app);
 require('./routes/api/control')(app);
